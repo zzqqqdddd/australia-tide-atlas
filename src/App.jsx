@@ -23,7 +23,7 @@ import {
 const assetUrl = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`;
 
 const assets = {
-  route: assetUrl("route-atlas-labeled.jpg"),
+  route: assetUrl("route-atlas-aged.jpg"),
   routeBase: assetUrl("route-atlas.jpg"),
   sydney: assetUrl("sydney-opera.jpg"),
   coast: assetUrl("gold-coast.jpg"),
@@ -260,10 +260,6 @@ export function App() {
           <div className="route-map">
             <img src={assets.route} alt="澳洲东海岸抽象路线图" />
           </div>
-          <figure className="stamp-photo">
-            <img src={assets.reef} alt="大堡礁海龟与珊瑚" />
-            <figcaption>10 OCT / QUEENSLAND</figcaption>
-          </figure>
         </div>
       </section>
 

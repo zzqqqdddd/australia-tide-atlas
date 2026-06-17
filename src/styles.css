@@ -325,42 +325,6 @@ h1 {
   pointer-events: none;
 }
 
-.stamp-photo {
-  position: absolute;
-  right: 3%;
-  bottom: 4%;
-  z-index: 3;
-  width: min(160px, 16vw);
-  margin: 0;
-  padding: 8px 8px 18px;
-  background: #f7f1df;
-  box-shadow: var(--shadow);
-  transform: rotate(-3deg);
-}
-
-.stamp-photo::before {
-  content: "";
-  position: absolute;
-  inset: 7px;
-  border: 1px dashed rgba(21, 48, 74, 0.28);
-  pointer-events: none;
-}
-
-.stamp-photo img {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  object-fit: cover;
-}
-
-.stamp-photo figcaption {
-  position: absolute;
-  right: 12px;
-  bottom: 5px;
-  font-size: 9px;
-  color: rgba(21, 48, 74, 0.62);
-  letter-spacing: 0.08em;
-}
-
 .facts-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -948,12 +912,6 @@ h1 {
     min-height: 0;
   }
 
-  .stamp-photo {
-    right: 14px;
-    bottom: 14px;
-    width: 104px;
-  }
-
   .facts-strip {
     margin-inline: 18px;
     grid-template-columns: 1fr;
@@ -1033,11 +991,6 @@ h1 {
 
   .route-map {
     min-height: 0;
-  }
-
-  .stamp-photo {
-    width: 86px;
-    padding: 6px 6px 15px;
   }
 
   .panel-actions button {
