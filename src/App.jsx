@@ -23,7 +23,8 @@ import {
 const assetUrl = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`;
 
 const assets = {
-  route: assetUrl("route-atlas.jpg"),
+  route: assetUrl("route-atlas-labeled.jpg"),
+  routeBase: assetUrl("route-atlas.jpg"),
   sydney: assetUrl("sydney-opera.jpg"),
   coast: assetUrl("gold-coast.jpg"),
   reef: assetUrl("great-barrier-reef.jpg"),
@@ -258,22 +259,6 @@ export function App() {
         <div className="route-stage" aria-label="澳洲东海岸路线图">
           <div className="route-map">
             <img src={assets.route} alt="澳洲东海岸抽象路线图" />
-            <div className="route-pin sydney">
-              <MapPin size={20} weight="fill" />
-              <span>Sydney</span>
-            </div>
-            <div className="route-pin gold">
-              <MapPin size={20} weight="fill" />
-              <span>Gold Coast</span>
-            </div>
-            <div className="route-pin brisbane">
-              <MapPin size={20} weight="fill" />
-              <span>Brisbane</span>
-            </div>
-            <div className="route-pin reef">
-              <MapPin size={20} weight="fill" />
-              <span>Great Barrier Reef</span>
-            </div>
           </div>
           <figure className="stamp-photo">
             <img src={assets.reef} alt="大堡礁海龟与珊瑚" />
@@ -480,7 +465,7 @@ function PlaceCard({ card, isExpanded, isSaved, onExpand, onSave }) {
 function DateDetail({ day }) {
   return (
     <section className="detail-view">
-      <div className="detail-cover" style={{ "--detail-cover-image": `url(${assets.route})` }}>
+      <div className="detail-cover" style={{ "--detail-cover-image": `url(${assets.routeBase})` }}>
         <p className="eyebrow">{day.day}</p>
         <h2>{day.title}</h2>
         <p>{day.summary}</p>
