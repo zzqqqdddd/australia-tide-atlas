@@ -256,22 +256,24 @@ export function App() {
         </div>
 
         <div className="route-stage" aria-label="澳洲东海岸路线图">
-          <img src={assets.route} alt="澳洲东海岸抽象路线图" />
-          <div className="route-pin sydney">
-            <MapPin size={20} weight="fill" />
-            <span>Sydney</span>
-          </div>
-          <div className="route-pin gold">
-            <MapPin size={20} weight="fill" />
-            <span>Gold Coast</span>
-          </div>
-          <div className="route-pin brisbane">
-            <MapPin size={20} weight="fill" />
-            <span>Brisbane</span>
-          </div>
-          <div className="route-pin reef">
-            <MapPin size={20} weight="fill" />
-            <span>Great Barrier Reef</span>
+          <div className="route-map">
+            <img src={assets.route} alt="澳洲东海岸抽象路线图" />
+            <div className="route-pin sydney">
+              <MapPin size={20} weight="fill" />
+              <span>Sydney</span>
+            </div>
+            <div className="route-pin gold">
+              <MapPin size={20} weight="fill" />
+              <span>Gold Coast</span>
+            </div>
+            <div className="route-pin brisbane">
+              <MapPin size={20} weight="fill" />
+              <span>Brisbane</span>
+            </div>
+            <div className="route-pin reef">
+              <MapPin size={20} weight="fill" />
+              <span>Great Barrier Reef</span>
+            </div>
           </div>
           <figure className="stamp-photo">
             <img src={assets.reef} alt="大堡礁海龟与珊瑚" />
