@@ -514,12 +514,6 @@ export function App() {
         <Fact icon={<Ticket size={24} />} label="建议天数" value="10 - 14天" />
       </section>
 
-      <section className="photo-strip" aria-label="旅途照片">
-        <img src={assets.sydney} alt="悉尼歌剧院夕阳" />
-        <img src={assets.coast} alt="黄金海岸日落" />
-        <img src={assets.reef} alt="大堡礁海底珊瑚" />
-      </section>
-
       <section className="workspace">
         <div className="content-panel">
           <div className="panel-tabs">

@@ -32,27 +32,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.72), transparent 28%),
-    radial-gradient(circle at 78% 18%, transparent 0 54px, rgba(22, 81, 116, 0.13) 55px 56px, transparent 57px 92px, rgba(22, 81, 116, 0.1) 93px 94px, transparent 95px),
-    conic-gradient(from 45deg at 78% 18%, transparent 0deg 39deg, rgba(201, 91, 36, 0.12) 39deg 44deg, transparent 44deg 84deg, rgba(22, 81, 116, 0.12) 84deg 90deg, transparent 90deg 129deg, rgba(201, 91, 36, 0.1) 129deg 134deg, transparent 134deg 174deg, rgba(22, 81, 116, 0.1) 174deg 180deg, transparent 180deg 219deg, rgba(201, 91, 36, 0.1) 219deg 224deg, transparent 224deg 264deg, rgba(22, 81, 116, 0.1) 264deg 270deg, transparent 270deg 309deg, rgba(201, 91, 36, 0.1) 309deg 314deg, transparent 314deg 360deg),
-    repeating-radial-gradient(ellipse at 88% 52%, rgba(47, 128, 168, 0.11) 0 1px, transparent 1px 34px),
-    linear-gradient(112deg, rgba(244, 236, 217, 0.96) 0%, rgba(232, 220, 196, 0.88) 42%, rgba(47, 128, 168, 0.18) 100%),
-    var(--paper);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 20;
-  opacity: 0.22;
-  background-image:
-    linear-gradient(rgba(56, 44, 31, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56, 44, 31, 0.035) 1px, transparent 1px);
-  background-size: 38px 38px, 38px 38px;
-  mix-blend-mode: multiply;
+  background: var(--paper-soft);
 }
 
 button {
@@ -132,10 +112,7 @@ img {
   margin: 0 auto;
   min-height: 100vh;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 88% 14%, rgba(22, 81, 116, 0.12), transparent 24%),
-    linear-gradient(90deg, rgba(251, 246, 233, 0.92) 0%, rgba(251, 246, 233, 0.8) 35%, rgba(47, 128, 168, 0.16) 100%),
-    var(--paper);
+  background: var(--paper-soft);
 }
 
 .topbar {
@@ -293,7 +270,7 @@ h1 {
 
 .route-stage {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   min-height: 470px;
   display: grid;
   align-items: center;
@@ -315,14 +292,6 @@ h1 {
   object-position: center;
   filter: saturate(0.96) contrast(1.04);
   mix-blend-mode: multiply;
-}
-
-.route-map::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(244, 236, 217, 0.18), rgba(22, 81, 116, 0.08));
-  pointer-events: none;
 }
 
 .facts-strip {
@@ -361,21 +330,6 @@ h1 {
 .fact strong {
   font-size: 15px;
   font-weight: 700;
-}
-
-.photo-strip {
-  height: 86px;
-  margin: 0 clamp(22px, 4vw, 68px);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 6px;
-  overflow: hidden;
-}
-
-.photo-strip img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .workspace {
@@ -1231,16 +1185,6 @@ h1 {
 
   .fact:last-child {
     border-bottom: 0;
-  }
-
-  .photo-strip {
-    margin-inline: 18px;
-    grid-template-columns: 1fr;
-    height: 180px;
-  }
-
-  .photo-strip img:nth-child(n + 2) {
-    display: none;
   }
 
   .workspace {
