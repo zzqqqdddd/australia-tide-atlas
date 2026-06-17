@@ -23,7 +23,7 @@ import {
 const assetUrl = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`;
 
 const assets = {
-  route: assetUrl("route-atlas-aged.jpg"),
+  route: assetUrl("route-atlas-cropped-left.jpg"),
   routeBase: assetUrl("route-atlas.jpg"),
   sydney: assetUrl("sydney-opera.jpg"),
   coast: assetUrl("gold-coast.jpg"),
