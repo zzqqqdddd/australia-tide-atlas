@@ -20,13 +20,15 @@ import {
   Waves,
 } from "@phosphor-icons/react";
 
+const assetUrl = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`;
+
 const assets = {
-  route: "/assets/route-atlas.jpg",
-  sydney: "/assets/sydney-opera.jpg",
-  coast: "/assets/gold-coast.jpg",
-  reef: "/assets/great-barrier-reef.jpg",
-  seafood: "/assets/seafood.jpg",
-  coffee: "/assets/coffee.jpg",
+  route: assetUrl("route-atlas.jpg"),
+  sydney: assetUrl("sydney-opera.jpg"),
+  coast: assetUrl("gold-coast.jpg"),
+  reef: assetUrl("great-barrier-reef.jpg"),
+  seafood: assetUrl("seafood.jpg"),
+  coffee: assetUrl("coffee.jpg"),
 };
 
 const navItems = [
@@ -476,7 +478,7 @@ function PlaceCard({ card, isExpanded, isSaved, onExpand, onSave }) {
 function DateDetail({ day }) {
   return (
     <section className="detail-view">
-      <div className="detail-cover">
+      <div className="detail-cover" style={{ "--detail-cover-image": `url(${assets.route})` }}>
         <p className="eyebrow">{day.day}</p>
         <h2>{day.title}</h2>
         <p>{day.summary}</p>

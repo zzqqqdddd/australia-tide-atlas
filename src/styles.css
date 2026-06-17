@@ -767,7 +767,7 @@ h1 {
   padding: 28px;
   background:
     linear-gradient(140deg, rgba(21, 48, 74, 0.82), rgba(47, 128, 168, 0.3)),
-    url("/assets/route-atlas.jpg") center / cover;
+    var(--detail-cover-image) center / cover;
   color: #fff7e8;
   display: flex;
   flex-direction: column;
