@@ -8,7 +8,11 @@ When implementing from a selected generated mock, treat that image as the source
 
 ## Prototype Direction
 
-- Build target: private Australia October travel guide, visual direction "Tide Atlas / 潮汐地图册".
-- Route: Sydney, Gold Coast, Brisbane, Great Barrier Reef.
-- Style: warm paper atlas texture, coastal blue, sunset orange, film-travel photography, ticket stamps, hand-drawn route-map feeling.
-- Structure: route-first homepage with date and city views, Chinese UI, no login or permissions in the first version.
+- Build target: personal travel website as a Jarvis-like holographic footprint archive.
+- Core engine: React + React Three Fiber + Drei for the WebGL world deck, GSAP for camera dive/tilt animation, Zustand for view and selection state, Tailwind CSS plus custom CSS for HUD panels, and local JSON/JS data for now.
+- Map direction: do not use images as the map. Render the world map in WebGL from real vector country outlines, not dot-matrix points. Keep the map language high-tech and holographic: dark ocean, cyan outlines, subtle low-saturation terrain layers, and independent glowing visited-city nodes.
+- Country-screen direction: the raised purple screen is only the spatial container for the selected country map. The selected country's map should keep the same holographic style as the world map rather than becoming a conventional bright geographic map.
+- Navigation direction: default is WORLD, a low-angle ground-map view. Selecting a visited city/country changes to COUNTRY by animating the PerspectiveCamera with GSAP; the world deck remains present as the visual floor reference.
+- UI direction: keep text and guides as readable HTML/HUD panels. Use Drei `Html` only for spatial labels that need to follow 3D coordinates.
+- HUD photo direction: key photos use an SVG overlay for annotation dots and draw-on leader lines; mobile uses click/tap instead of hover.
+- Homepage constraints: no hover previews, no filters, no permanent stats strip. Keep the title quiet and the return action as an explicit "← 世界" control.
